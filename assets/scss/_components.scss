@@ -1,0 +1,38 @@
+// 元件樣式
+// --------------------------------------------------
+
+.feature-item {
+  max-width: 220px;
+
+  @media (max-width: 991.98px) {
+    max-width: 100%;
+  }
+}
+
+.hero-card {
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .badge {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+  }
+}
+

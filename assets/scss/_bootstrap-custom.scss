@@ -1,0 +1,78 @@
+// Bootstrap 元件客製化設定
+// --------------------------------------------------
+
+// 導覽列
+.navbar-dark {
+  background: linear-gradient(
+    90deg,
+    rgba(44, 40, 30, 0.95),
+    rgba(75, 54, 36, 0.9)
+  );
+}
+
+// 連結樣式
+.link-primary {
+  font-weight: 500;
+}
+
+// 按鈕樣式
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+
+  &:hover,
+  &:focus {
+    background-color: $chinghantan-brown-600;
+    border-color: $chinghantan-brown-600;
+  }
+}
+
+.btn-outline-primary {
+  color: $primary;
+  border-color: $primary;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
+// Badge
+.badge.bg-primary-subtle {
+  background-color: rgba($primary, 0.12) !important;
+  color: $primary !important;
+}
+
+// 卡片
+.card {
+  border-radius: $border-radius-lg;
+  box-shadow: $box-shadow-sm;
+
+  &-body {
+    padding: 2rem;
+  }
+
+  &-img-top {
+    border-top-left-radius: $border-radius-lg;
+    border-top-right-radius: $border-radius-lg;
+  }
+}
+
+// 表單
+.form-label {
+  font-weight: 500;
+  color: $gray-700;
+}
+
+.form-control {
+  border-color: $input-border-color;
+  border-radius: $input-border-radius;
+
+  &:focus {
+    border-color: $input-focus-border-color;
+    box-shadow: $input-focus-box-shadow;
+  }
+}
+

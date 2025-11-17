@@ -1,0 +1,42 @@
+// 共用版型配置
+// --------------------------------------------------
+
+body {
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+.navbar {
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+
+  &.navbar-hidden {
+    transform: translateY(-100%);
+  }
+}
+
+.hero-banner {
+  min-height: 70vh;
+  background: radial-gradient(
+      circle at top left,
+      rgba($chinghantan-brown-400, 0.85) 0%,
+      rgba($chinghantan-brown-700, 0.9) 60%
+    ),
+    url("https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?auto=format&fit=crop&w=1600&q=80")
+      center / cover no-repeat;
+  color: #fff;
+}
+
+.hero-card {
+  box-shadow: $box-shadow-lg;
+}
+
+footer {
+  background: #2c281e;
+}
+
+@media (max-width: 991.98px) {
+  .hero-banner {
+    text-align: center;
+  }
+}
+

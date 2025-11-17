@@ -1,0 +1,88 @@
+// 精漢堂專案 Bootstrap 變數覆寫
+// --------------------------------------------------
+// 請於引入 Bootstrap 主體之前載入此檔案。
+
+// 色票
+$chinghantan-brown-100: #f3e5d9;
+$chinghantan-brown-200: #e5c9af;
+$chinghantan-brown-300: #d6ad86;
+$chinghantan-brown-400: #c28f5c;
+$chinghantan-brown-500: #7b4b2c;
+$chinghantan-brown-600: #643a20;
+$chinghantan-brown-700: #4b301d;
+$chinghantan-teal-500: #2f4f4f;
+$chinghantan-ink: #1f1f1f;
+$chinghantan-sand: #faf7f2;
+
+// Bootstrap 主色系覆寫
+$primary: $chinghantan-brown-500;
+$secondary: $chinghantan-teal-500;
+$success: #4fa37f;
+$info: #4a7b9d;
+$warning: #c78f37;
+$danger: #bf4d3b;
+$light: lighten($chinghantan-sand, 2%);
+$dark: $chinghantan-ink;
+
+// 灰階
+$gray-100: #f2f2f2;
+$gray-200: #e0dedb;
+$gray-300: #c8c4bd;
+$gray-600: #6f6a64;
+$gray-700: #554f48;
+$gray-900: #2a2621;
+
+// 文字與背景
+$body-bg: $chinghantan-sand;
+$body-color: $chinghantan-ink;
+$body-font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-sans-serif: $body-font-family;
+$headings-font-weight: 700;
+$headings-color: $chinghantan-ink;
+
+// 元件圓角
+$border-radius-sm: .5rem;
+$border-radius: .75rem;
+$border-radius-lg: 1rem;
+$border-radius-xl: 1.5rem;
+
+// 按鈕
+$btn-padding-y: .625rem;
+$btn-padding-x: 1.75rem;
+$btn-font-weight: 500;
+
+// 連結
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: $chinghantan-brown-600;
+$link-hover-decoration: underline;
+
+// 表單
+$input-border-radius: .75rem;
+$input-border-color: $gray-200;
+$input-focus-border-color: $primary;
+$input-focus-box-shadow: 0 0 0 .2rem rgba($primary, .15);
+
+// Badge
+$badge-font-weight: 500;
+
+// 陰影
+$box-shadow-sm: 0 .25rem .75rem rgba($chinghantan-ink, .08);
+$box-shadow: 0 .5rem 1.5rem rgba($chinghantan-ink, .07);
+$box-shadow-lg: 0 .75rem 2rem rgba($chinghantan-ink, .12);
+
+// Navbar
+$navbar-dark-color: rgba(#fff, .9);
+$navbar-dark-hover-color: #fff;
+$navbar-dark-brand-color: #fff;
+$navbar-dark-brand-hover-color: #fff;
+
+// 容器寬度
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+

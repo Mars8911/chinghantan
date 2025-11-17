@@ -1,0 +1,105 @@
+.contact-bar {
+    background: #f3f3f3;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #e2d7be;
+    padding: 12px 0;
+  
+    .inner {
+      width: 100%;
+      max-width: 922px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+  
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #1a674f;
+      font-size: 26px;
+      font-weight: 600;
+      white-space: nowrap;
+  
+      img {
+        width: 52px;
+        height: auto;
+        flex-shrink: 0;
+      }
+  
+      .label {
+        font-size: 24px;
+        color: #1a674f;
+      }
+  
+      .value {
+        font-size: 28px;
+        font-weight: 700;
+      }
+  
+      &:hover,
+      &:focus-visible {
+        color: #0d4d3a;
+  
+        .label,
+        .value {
+          color: inherit;
+        }
+      }
+    }
+  
+    .contact-item--line .value {
+      color: #15a907;
+    }
+  
+    .contact-item--phone .value {
+      color: #0f5e73;
+    }
+  
+    .contact-divider {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, #b6b6b6 20%, #b6b6b6 80%, transparent 100%);
+      min-width: 80px;
+    }
+  }
+
+  .marquee-section {
+    background: #fff8dc;
+    padding: 16px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 8px rgba(0, 0, 0, 0.1);
+
+    .marquee-wrapper {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .marquee-content {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee-scroll 20s linear infinite;
+    }
+
+    .marquee-text {
+      display: inline-block;
+      color: #d32f2f;
+      font-weight: 700;
+      font-size: 24px;
+      padding-right: 80px;
+      line-height: 1.5;
+    }
+  }
+
+  @keyframes marquee-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
