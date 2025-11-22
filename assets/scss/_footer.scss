@@ -1,0 +1,56 @@
+/* Footer 區塊：高 160px，內文寬 1280px 並置中 */
+.site-footer {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  background: #5C3B1F;
+  color: #fff;
+}
+
+.site-footer .inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.site-footer__logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.site-footer__logo img {
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+.site-footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  margin-left: 40px;
+}
+
+.site-footer__info-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 48px;
+  color: #fff;
+}
+
+.site-footer__info-line .divider {
+  margin: 0 4px;
+  color: #fff;
+}
+
