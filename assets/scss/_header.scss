@@ -49,6 +49,34 @@
     color: #7e5134;
   }
   
+  /* 背景圖 icon */
+  .main-nav .icon-bg {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .main-nav .icon-bg--t1 {
+    background-image: url('../images/t1.svg');
+  }
+  .main-nav .icon-bg--t2 {
+    background-image: url('../images/t2.svg');
+  }
+  .main-nav .icon-bg--t3 {
+    background-image: url('../images/t3.svg');
+  }
+  .main-nav .icon-bg--t4 {
+    background-image: url('../images/t4.svg');
+  }
+  .main-nav .icon-bg--t5 {
+    background-image: url('../images/t5.svg');
+  }
+  .main-nav .icon-bg--t6 {
+    background-image: url('../images/t6.svg');
+  }
+  
   /* hover：文字與 icon 變紅色（不變背景） */
   .main-nav a:hover,
   .main-nav a:focus-visible {

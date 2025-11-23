@@ -11,6 +11,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 <body>
+    <!-- 辨識真假彈出卡片 -->
+    <div class="authenticity-popup" id="authenticityPopup">
+        <div class="authenticity-popup__overlay"></div>
+        <div class="authenticity-popup__card">
+            <button class="authenticity-popup__close" aria-label="關閉">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <div class="authenticity-popup__content">
+                <div class="authenticity-popup__content-inner">           
+                <h2 class="authenticity-popup__title">辨識真假</h2>
+                <p class="authenticity-popup__subtitle">精漢堂萬寧軟膏 沒有姊妹品 請認明註冊商標</p>
+                <div class="authenticity-popup__sections">
+                    <div class="authenticity-popup__section authenticity-popup__section--left">
+                        <div class="authenticity-popup__section-box">
+                            <h3 class="authenticity-popup__section-title">1. 看瓶蓋:</h3>
+                            <p class="authenticity-popup__section-desc">認明 "註冊商標"</p>
+                        </div>
+                    </div>
+                    <div class="authenticity-popup__section authenticity-popup__section--right">
+                        <div class="authenticity-popup__section-box">
+                            <h3 class="authenticity-popup__section-title">2. 看瓶底:</h3>
+                            <p class="authenticity-popup__section-desc">立體"註冊商標"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="authenticity-popup__bottom-image">
+                    <img src="assets/images/modelImg.svg" alt="產品示意圖">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
     <!-- header -->
     <header class="site-header">
         <div class="inner">
@@ -19,12 +51,12 @@
             </div>
             <nav class="main-nav" aria-label="主選單">
                 <ul>
-                    <li><a href="#"><i class="bi bi-bullseye"></i><span>使用見證</span></a></li>
-                    <li><a href="#"><i class="bi bi-cart3"></i><span>購買資訊</span></a></li>
-                    <li><a href="#"><i class="bi bi-house-door"></i><span>創辦緣起</span></a></li>
-                    <li><a href="#"><i class="bi bi-chat-dots"></i><span>關於我們</span></a></li>
-                    <li><a href="#"><i class="bi bi-heart"></i><span>社會公益</span></a></li>
-                    <li><a href="#"><i class="bi bi-grid-3x3-gap"></i><span>相關企業</span></a></li>
+                    <li><a href="index.html"><i class="icon-bg icon-bg--t1"></i><span>使用見證</span></a></li>
+                    <li><a href="shop.html"><i class="icon-bg icon-bg--t2"></i><span>購買資訊</span></a></li>
+                    <li><a href="found.html"><i class="icon-bg icon-bg--t3"></i><span>創辦緣起</span></a></li>
+                    <li><a href="about.html"><i class="icon-bg icon-bg--t4"></i><span>關於我們</span></a></li>
+                    <li><a href="public-welfare.html"><i class="icon-bg icon-bg--t5"></i><span>社會公益</span></a></li>
+                    <li><a href="related-enterprise.html"><i class="icon-bg icon-bg--t6"></i><span>相關企業</span></a></li>
                 </ul>
             </nav>
         </div>
