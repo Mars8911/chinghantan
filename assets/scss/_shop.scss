@@ -252,15 +252,15 @@
   }
 
   &__badge {
-    display: inline-block;
-    padding: 0;
-    border-radius: 0;
-    background: transparent;
-    color: #9e002a;
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 24px;
+    border-radius: 999px;
+    background: #a01f3f;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
   }
 
   &__icon {
