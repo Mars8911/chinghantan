@@ -1,0 +1,43 @@
+{
+    "version": 2,
+    "cleanUrls": true,
+    "trailingSlash": false,
+  
+    "headers": [
+      {
+        "source": "/assets/(.*)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        ]
+      },
+      {
+        "source": "/(.*)\\.(css|js|png|jpg|jpeg|svg|webp|gif|ico|woff|woff2|ttf|eot)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        ]
+      },
+      {
+        "source": "/",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=0, s-maxage=0, must-revalidate" }
+        ]
+      },
+      {
+        "source": "/(.*)\\.html",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=0, s-maxage=0, must-revalidate" }
+        ]
+      },
+      {
+        "source": "/(.*)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=0, s-maxage=0, must-revalidate" }
+        ]
+      }
+    ],
+  
+    "redirects": [
+      { "source": "/:path+.html", "destination": "/:path+", "permanent": true }
+    ]
+  }
+  
