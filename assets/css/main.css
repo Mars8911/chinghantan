@@ -12263,6 +12263,43 @@ footer {
   color: #fff;
 }
 
+/* 電腦版：主選單＋次選單同一橫列（2 欄 + 4 欄）；次選單固定四欄不換行 */
+@media (min-width: 769px) {
+  /* 導覽列突破 .inner 的 max-width，左右貼齊視窗（無側邊留白） */
+  .site-header .main-nav {
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    box-sizing: border-box;
+  }
+  .main-nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+  .main-nav__list--primary {
+    flex: 2 1 0%;
+    min-width: 0;
+    width: auto;
+  }
+  .main-nav__list--secondary--desktop {
+    flex: 4 1 0%;
+    min-width: 0;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    border-top: none;
+    border-left: 1px solid rgba(92, 59, 31, 0.15);
+  }
+  .main-nav__list--secondary--desktop > li {
+    min-width: 0;
+  }
+  .main-nav__list--secondary--desktop a {
+    min-height: 88px;
+  }
+}
 /* 手機：兩項主選單置頂 sticky；桌機仍顯示 header 內六項 */
 @media (max-width: 768px) {
   .site-header {
