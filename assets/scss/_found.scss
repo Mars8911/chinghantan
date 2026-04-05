@@ -270,6 +270,54 @@
       opacity: 0.8;
     }
   }
+
+  @media (max-width: 991.98px) {
+    &__bottom {
+      margin-top: 0;
+      padding: 1.5rem 0 2rem;
+      max-width: 100%;
+    }
+
+    &__bottom .inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 0 1rem;
+    }
+
+    &__image {
+      position: relative;
+      left: auto;
+      top: auto;
+      width: min(260px, 72vw);
+      margin: 0 auto;
+      pointer-events: auto;
+    }
+
+    &__text {
+      margin-left: 0;
+      padding-right: 0;
+      width: 100%;
+      max-width: 36rem;
+      text-align: center;
+    }
+
+    &__text-line {
+      padding-left: 0;
+      font-size: clamp(1rem, 4vw, 1.25rem);
+
+      &:first-child::before {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    &__bottom {
+      padding: 1.25rem 0 1.5rem;
+    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -361,9 +409,29 @@
   }
 
   @media (max-width: 768px) {
+    .inner {
+      padding: 0 1rem;
+    }
+
     &__photos {
       grid-template-columns: 1fr;
       gap: 2rem;
+    }
+
+    &__photo-wrapper {
+      height: auto;
+      min-height: 240px;
+      max-height: 70vh;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .inner {
+      padding: 0 0.75rem;
+    }
+
+    &__text-line {
+      font-size: 0.95rem;
     }
   }
 }
@@ -471,6 +539,7 @@
   @media (max-width: 992px) {
     .inner {
       grid-template-columns: 1fr;
+      padding: 0 1rem;
     }
 
     &__figure {
@@ -478,6 +547,28 @@
       max-width: 420px;
       width: 100%;
       margin: 0 auto;
+    }
+
+    &__title {
+      font-size: clamp(1.25rem, 5vw, 1.75rem);
+      line-height: 1.35;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 2.5rem 0;
+
+    .inner {
+      padding: 0 0.75rem;
+    }
+
+    &__title {
+      font-size: 1.125rem;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
     }
   }
 }
@@ -557,12 +648,30 @@
   }
 
   @media (max-width: 768px) {
+    .inner {
+      padding: 0 1rem;
+    }
+
     &__gallery {
       grid-template-columns: 1fr;
     }
 
     &__item:last-child {
       grid-column: 1;
+    }
+
+    &__title {
+      flex-wrap: wrap;
+      text-align: center;
+      padding: 0 0.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 2.5rem 0;
+
+    .inner {
+      padding: 0 0.75rem;
     }
   }
 }

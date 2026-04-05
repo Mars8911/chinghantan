@@ -17,7 +17,10 @@
 .purchase-info {
   padding: 48px 0px;
   background: #fff;
-  
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
+
   &__container {
     width: 100%;
     max-width: 1280px;
@@ -25,6 +28,8 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+    box-sizing: border-box;
+    min-width: 0;
   }
   
   &__section {
@@ -190,37 +195,108 @@
 }
 
 // 響應式設計
+@media (max-width: 991.98px) {
+  .purchase-info {
+    padding: 40px 20px;
+
+    &__item {
+      min-width: 0;
+
+      &:first-child {
+        white-space: normal;
+      }
+    }
+
+    &__text {
+      flex: 1 1 auto;
+      min-width: 0;
+      flex-shrink: 1;
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+
+    &__note {
+      font-size: clamp(18px, 3vw, 24px);
+      line-height: 1.5;
+      max-width: 100%;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .purchase-info {
-    padding: 32px 16px;
-    
+    padding: 28px 16px;
+    overflow-x: hidden;
+
     &__container {
       gap: 24px;
+      width: 100%;
+      max-width: 100%;
     }
-    
+
+    &__item {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      max-width: 100%;
+      min-width: 0;
+
+      &:first-child {
+        white-space: normal;
+      }
+    }
+
     &__text {
-      font-size: 16px;
+      font-size: 15px;
+      white-space: normal;
+      flex: 1 1 auto;
+      min-width: 0;
+      flex-shrink: 1;
+      word-break: break-word;
+      overflow-wrap: anywhere;
     }
-    
+
     &__note {
-      font-size: 14px;
-      padding-left: 0;
+      font-size: 15px;
+      line-height: 1.55;
+      margin-top: 12px;
+      max-width: 100%;
+      word-break: break-word;
+      overflow-wrap: anywhere;
     }
-    
+
     &__icon {
       i {
         font-size: 20px;
       }
-      
+
       span {
         font-size: 14px;
       }
     }
-    
+
     &__icon--line-circle,
     &__icon--line-box {
       width: 48px;
       height: 48px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .purchase-info {
+    padding: 24px 12px;
+
+    &__text {
+      font-size: 14px;
+    }
+
+    &__note {
+      font-size: 14px;
+    }
+
+    &__item:first-child {
+      white-space: normal;
     }
   }
 }
@@ -230,9 +306,12 @@
   margin-top: 32px;
   padding: 48px 16px 56px;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   background: #EAE3DA;
   border-radius: 0;
   text-align: center;
+  min-width: 0;
 
   &__inner {
     width: 100%;
@@ -240,6 +319,8 @@
     margin: 0 auto;
     padding: 48px 32px 56px;
     border-radius: 32px;
+    box-sizing: border-box;
+    min-width: 0;
   }
 
   &__header {
@@ -302,11 +383,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
- padding-top: 50px;
+  padding-top: 50px;
   background: transparent;
   border-radius: 28px;
   border: none;
   transition: none;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 
   &__image {
     width: 240px;
@@ -357,22 +441,94 @@
 
 @media (max-width: 960px) {
   .product-showcase {
-    padding: 40px 20px;
+    padding: 32px 12px 48px;
+    margin-top: 24px;
+    max-width: 100%;
+
+    &__inner {
+      padding: 32px 16px 40px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &__header {
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    &__badge {
+      font-size: 14px;
+      padding: 6px 16px;
+    }
 
     &__items {
       grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    &__news-card {
+      padding: 24px 20px;
+    }
+
+    &__news-title {
+      font-size: 20px;
+    }
+
+    &__news-desc {
+      font-size: 16px;
     }
   }
 
   .product-card {
+    padding-top: 32px;
+
     &__image {
-      width: 220px;
-      height: 220px;
+      width: min(220px, 70vw);
+      height: min(220px, 70vw);
+      margin-bottom: 32px;
+    }
+
+    &__size {
+      font-size: 18px;
+    }
+
+    &__price {
+      font-size: 26px;
+    }
+
+    &__note {
+      font-size: 16px;
     }
 
     &--large .product-card__image {
-      width: 240px;
-      height: 240px;
+      width: min(240px, 75vw);
+      height: min(240px, 75vw);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .product-showcase {
+    padding: 24px 12px 40px;
+
+    &__inner {
+      padding: 24px 16px 32px;
+      border-radius: 16px;
+    }
+
+    &__news-title {
+      font-size: 18px;
+    }
+
+    &__news-desc {
+      font-size: 15px;
+    }
+  }
+
+  .product-card {
+    &__price {
+      font-size: 22px;
     }
   }
 }

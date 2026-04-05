@@ -3,7 +3,6 @@
 
 .about-section {
   padding: 60px 20px;
-
   min-height: 100vh;
 }
 
@@ -88,9 +87,49 @@
 }
 
 // 響應式設計
+@media (max-width: 991.98px) {
+  .about-section {
+    padding: 48px 20px;
+    min-height: 0;
+  }
+
+  .about-container {
+    padding: 0 18px;
+  }
+
+  .about-header {
+    &__title {
+      font-size: 24px;
+    }
+  }
+
+  .guildhall-section {
+    padding: 48px 0;
+
+    .about-container {
+      padding: 0 18px;
+    }
+  }
+
+  .guildhall-header {
+    &__title {
+      font-size: 24px;
+    }
+  }
+
+  .footer-dm-section {
+    padding: 48px 0;
+
+    .about-container {
+      padding: 0 18px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .about-section {
     padding: 40px 15px;
+    min-height: 0;
   }
   
   .about-container {
@@ -135,6 +174,20 @@
     &__text {
       font-size: 14px;
       margin-top: 15px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header {
+    &__title {
+      font-size: 20px;
+    }
+  }
+
+  .guildhall-header {
+    &__title {
+      font-size: 20px;
     }
   }
 }

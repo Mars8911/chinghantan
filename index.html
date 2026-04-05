@@ -50,9 +50,11 @@
                 <img src="assets/images/LOGO.svg" alt="精漢堂 LOGO">
             </div>
             <nav class="main-nav" aria-label="主選單">
-                <ul>
-                    <li><a href="index.html"><i class="icon-bg icon-bg--t1"></i><span>使用見證</span></a></li>
+                <ul class="main-nav__list main-nav__list--primary">
+                    <li><a href="index.html" aria-current="page"><i class="icon-bg icon-bg--t1"></i><span>使用見證</span></a></li>
                     <li><a href="shop.html"><i class="icon-bg icon-bg--t2"></i><span>購買資訊</span></a></li>
+                </ul>
+                <ul class="main-nav__list main-nav__list--secondary main-nav__list--secondary--desktop">
                     <li><a href="found.html"><i class="icon-bg icon-bg--t3"></i><span>創辦緣起</span></a></li>
                     <li><a href="about.html"><i class="icon-bg icon-bg--t4"></i><span>關於我們</span></a></li>
                     <li><a href="public-welfare.html"><i class="icon-bg icon-bg--t5"></i><span>社會公益</span></a></li>
@@ -92,12 +94,12 @@
             <figure class="visual-card visual-card--logo">
                 <img src="assets/images/logo-banner.svg" alt="精漢堂 LOGO">
             </figure>
-            <figure class="visual-card">
-                <video src="assets/images/1118ad.mp4" style="min-width: 1280px;" autoplay loop muted playsinline></video>
+            <figure class="visual-card visual-card--video">
+                <video src="assets/images/1118ad.mp4" autoplay loop muted playsinline></video>
             </figure>
-           <img src="assets/images/logo-banner-smaill.svg" alt="精漢堂 LOGO" class="logo-banner-small">
+            <img src="assets/images/logo-banner-smaill.svg" alt="精漢堂 LOGO" class="logo-banner-small">
             <figure class="visual-card visual-card--wide">
-                <img src="assets/images/index-sho.svg" alt="門市金色大門照片" style="min-width: 1280px;">
+                <img src="assets/images/index-sho.svg" alt="門市金色大門照片" class="visual-stack__wide-img">
             </figure>
         </div>
     </section>
@@ -276,6 +278,15 @@
             </div>
         </div>
     </section>
+    <div class="site-footer-stack">
+    <nav class="main-nav main-nav--bottom" aria-label="主選單（手機版）">
+        <ul class="main-nav__list main-nav__list--secondary">
+            <li><a href="found.html"><i class="icon-bg icon-bg--t3"></i><span>創辦緣起</span></a></li>
+            <li><a href="about.html"><i class="icon-bg icon-bg--t4"></i><span>關於我們</span></a></li>
+            <li><a href="public-welfare.html"><i class="icon-bg icon-bg--t5"></i><span>社會公益</span></a></li>
+            <li><a href="related-enterprise.html"><i class="icon-bg icon-bg--t6"></i><span>相關企業</span></a></li>
+        </ul>
+    </nav>
     <!-- Footer -->
     <footer class="site-footer">
         <div class="inner">
@@ -298,6 +309,7 @@
             </div>
         </div>
     </footer>
+    </div>
 
     <script src="assets/js/custom.js"></script>
 </body>

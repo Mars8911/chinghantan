@@ -52,10 +52,12 @@
                 <img src="assets/images/LOGO.svg" alt="精漢堂 LOGO">
             </div>
             <nav class="main-nav" aria-label="主選單">
-                <ul>
+                <ul class="main-nav__list main-nav__list--primary">
                     <li><a href="index.html"><i class="icon-bg icon-bg--t1"></i><span>使用見證</span></a></li>
                     <li><a href="shop.html"><i class="icon-bg icon-bg--t2"></i><span>購買資訊</span></a></li>
-                    <li><a href="found.html"><i class="icon-bg icon-bg--t3"></i><span>創辦緣起</span></a></li>
+                </ul>
+                <ul class="main-nav__list main-nav__list--secondary main-nav__list--secondary--desktop">
+                    <li><a href="found.html" aria-current="page"><i class="icon-bg icon-bg--t3"></i><span>創辦緣起</span></a></li>
                     <li><a href="about.html"><i class="icon-bg icon-bg--t4"></i><span>關於我們</span></a></li>
                     <li><a href="public-welfare.html"><i class="icon-bg icon-bg--t5"></i><span>社會公益</span></a></li>
                     <li><a href="related-enterprise.html"><i class="icon-bg icon-bg--t6"></i><span>相關企業</span></a></li>
@@ -194,6 +196,15 @@
     </section>
 
 
+    <div class="site-footer-stack">
+    <nav class="main-nav main-nav--bottom" aria-label="主選單（手機版）">
+        <ul class="main-nav__list main-nav__list--secondary">
+            <li><a href="found.html" aria-current="page"><i class="icon-bg icon-bg--t3"></i><span>創辦緣起</span></a></li>
+            <li><a href="about.html"><i class="icon-bg icon-bg--t4"></i><span>關於我們</span></a></li>
+            <li><a href="public-welfare.html"><i class="icon-bg icon-bg--t5"></i><span>社會公益</span></a></li>
+            <li><a href="related-enterprise.html"><i class="icon-bg icon-bg--t6"></i><span>相關企業</span></a></li>
+        </ul>
+    </nav>
     <!-- Footer -->
     <footer class="site-footer">
         <div class="inner">
@@ -216,6 +227,7 @@
             </div>
         </div>
     </footer>
+    </div>
 
     <script src="assets/js/custom.js"></script>
 </body>
