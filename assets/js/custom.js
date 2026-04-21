@@ -31,9 +31,47 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.addEventListener('click', closePopup);
     }
 
-    // ESC 鍵關閉
+    const videoModal = document.getElementById('videoModal');
+    const videoIframe = videoModal?.querySelector('.video-modal__iframe');
+
+    const closeVideoModal = () => {
+        if (!videoModal || !videoIframe) return;
+        videoIframe.src = '';
+        videoModal.classList.remove('is-active');
+        videoModal.setAttribute('hidden', '');
+        if (!authenticityPopup?.classList.contains('is-active')) {
+            document.body.style.overflow = '';
+        }
+    };
+
+    const openVideoModal = (videoId) => {
+        if (!videoModal || !videoIframe || !videoId) return;
+        videoIframe.src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?autoplay=1&rel=0`;
+        videoModal.classList.add('is-active');
+        videoModal.removeAttribute('hidden');
+        document.body.style.overflow = 'hidden';
+    };
+
+    document.querySelectorAll('a[data-youtube-id].testimonial-card__play').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            const id = link.getAttribute('data-youtube-id');
+            if (id) {
+                e.preventDefault();
+                openVideoModal(id);
+            }
+        });
+    });
+
+    videoModal?.querySelectorAll('[data-video-modal-close]').forEach((el) => {
+        el.addEventListener('click', closeVideoModal);
+    });
+
+    // ESC 鍵關閉（影片優先，其次辨識真假）
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && authenticityPopup?.classList.contains('is-active')) {
+        if (e.key !== 'Escape') return;
+        if (videoModal?.classList.contains('is-active')) {
+            closeVideoModal();
+        } else if (authenticityPopup?.classList.contains('is-active')) {
             closePopup();
         }
     });

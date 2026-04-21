@@ -181,49 +181,49 @@
             <div class="user-testimonials__grid">
                 <article class="testimonial-card">
                     <div class="testimonial-card__thumbnail">
-                        <a href="https://www.youtube.com/watch?v=l0sAtZI29CQ" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=l0sAtZI29CQ" class="testimonial-card__play" data-youtube-id="l0sAtZI29CQ">
                             <img src="assets/images/userVideo01.svg" alt="使用者見證影片">
                         </a>
                     </div>
                 </article>
                 <article class="testimonial-card">
                     <div class="testimonial-card__thumbnail">
-                        <a href="https://www.youtube.com/watch?v=KjyMhgrXa7M" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=KjyMhgrXa7M" class="testimonial-card__play" data-youtube-id="KjyMhgrXa7M">
                             <img src="assets/images/userVideo02.svg" alt="使用者見證影片">
                         </a>
                     </div>
                 </article>
                 <article class="testimonial-card">
                     <div class="testimonial-card__thumbnail">
-                        <a href="https://www.youtube.com/watch?v=7Dxr9K14-fU" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=7Dxr9K14-fU" class="testimonial-card__play" data-youtube-id="7Dxr9K14-fU">
                             <img src="assets/images/userVideo03.svg" alt="使用者見證影片">
                         </a>
                     </div>
                 </article>
                 <article class="testimonial-card">
                     <div class="testimonial-card__thumbnail">
-                        <a href="https://www.youtube.com/watch?v=-W0YG0up_h0" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=-W0YG0up_h0" class="testimonial-card__play" data-youtube-id="-W0YG0up_h0">
                             <img src="assets/images/userVideo04.svg" alt="使用者見證影片">
                         </a>
                     </div>
                 </article>
                 <article class="testimonial-card">
                     <div class="testimonial-card__thumbnail">
-                        <a href="https://www.youtube.com/watch?v=Qh3A1sDtnYg" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=Qh3A1sDtnYg" class="testimonial-card__play" data-youtube-id="Qh3A1sDtnYg">
                             <img src="assets/images/userVideo05.svg" alt="使用者見證影片">
                         </a>
                     </div>
                 </article>
                 <article class="testimonial-card">
                     <div class="testimonial-card__thumbnail">
-                        <a href="https://www.youtube.com/watch?v=8ji5BjkoQJo" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=8ji5BjkoQJo" class="testimonial-card__play" data-youtube-id="8ji5BjkoQJo">
                             <img src="assets/images/userVideo06.svg" alt="使用者見證影片">
                         </a>
                     </div>
                 </article>
                 <article class="testimonial-card">
                     <div class="testimonial-card__thumbnail">
-                        <a href="https://www.youtube.com/watch?v=ocZilp09BYM" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=ocZilp09BYM" class="testimonial-card__play" data-youtube-id="ocZilp09BYM">
                             <img src="assets/images/userVideo07.svg" alt="使用者見證影片">
                         </a>
                     </div>
@@ -235,13 +235,7 @@
                         </a>
                     </div>
                 </article>
-                <article class="testimonial-card">
-                    <div class="testimonial-card__thumbnail">
-                        <!-- <a href="#" target="_blank" rel="noopener">
-                            <img src="assets/images/userVideo01.svg" alt="使用者見證影片">
-                        </a> -->
-                    </div>
-                </article>
+       
             </div>
         </div>
     </section>
@@ -309,6 +303,19 @@
             </div>
         </div>
     </footer>
+    </div>
+
+    <!-- 見證影片：頁內播放（YouTube 嵌入） -->
+    <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="影片播放" hidden>
+        <div class="video-modal__overlay" data-video-modal-close tabindex="-1"></div>
+        <div class="video-modal__box">
+            <button type="button" class="video-modal__close" data-video-modal-close aria-label="關閉">
+                <i class="bi bi-x-lg" aria-hidden="true"></i>
+            </button>
+            <div class="video-modal__ratio">
+                <iframe class="video-modal__iframe" title="YouTube 見證影片" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
     </div>
 
     <script src="assets/js/custom.js"></script>
